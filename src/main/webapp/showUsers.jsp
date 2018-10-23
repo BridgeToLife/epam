@@ -6,8 +6,9 @@
 <head>
 	<title><c:out value = "${user.getFirstName()} ${user.getLastName()}"/></title>
 	<link rel="stylesheet" href="resources/css/style.css"/>
-        <link rel="stylesheet" href="resources/css/orders.css"/>
+        <link rel="stylesheet" href="resources/css/scroll.css"/>
         <link rel="stylesheet" href="resources/css/content.css"/>
+        <link rel="stylesheet" href="resources/css/search.css"/>
 
 
 </head>
@@ -15,20 +16,19 @@
 
     <div class="container">
         <jsp:include page="/includes/head.jsp"/>
-        <div id="wrap"></div>
         <main>
 
             <div class="search">
 
                 <form action="/tracks/controller?command=findUser">
                     <p>
-                       <label for="username" class="username"> User name </label>
-                       <input type="text" id="username" name="firstname" placeholder="Ilya"/>
+                       <label for="usernameInput" class="usernameLabel"> User name </label>
+                       <input type="text" id="usernameInput" name="firstname" placeholder="Ilya"/>
                     </p>
 
                     <p>
-                       <label for="username" class="username"> User surname </label>
-                       <input type="text" id="username" name="lastname" placeholder="Vorobyov"/>
+                       <label for="usernameInput" class="usernameLabel"> User surname </label>
+                       <input type="text" id="usernameInput" name="lastname" placeholder="Vorobyov"/>
                     </p>
 
                     <p class="search button">
@@ -39,7 +39,7 @@
                 </form>
             </div>
 
-            <div class="tableMenu">
+            <div class="scrollMenu">
 
                <c:forEach var="user" items="${userList}" varStatus="loop">
                    <div class="scroll" id="order${loop.index}">
@@ -49,12 +49,6 @@
                        <p>BONUS: ${user.getBonusPoints()}</p>
 
                        <p class="button" id="book"><a href="/tracks/controller?orderId=${order.getId()}&command=bookOrder">Get</a></p>
-
-                       <div class="window" id="window${loop.index}" style="display: none">
-
-
-
-                       <a href="#close"></a>
                        </div>
 
                     </c:forEach>

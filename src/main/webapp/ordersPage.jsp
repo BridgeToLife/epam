@@ -4,7 +4,7 @@
 <head>
 	<title><c:out value = "${user.getFirstName()} ${user.getLastName()}"/></title>
 	<link rel="stylesheet" href="resources/css/style.css"/>
-    <link rel="stylesheet" href="resources/css/orders.css"/>
+    <link rel="stylesheet" href="resources/css/scroll.css"/>
     <link rel="stylesheet" href="resources/css/content.css"/>
 
 </head>
@@ -14,7 +14,7 @@
         <jsp:include page="/includes/head.jsp"/>
 
         <main>
-            <div class="orders">
+            <div class="scrollMenu">
                         <c:if test="${user.getRole() == 'ADMIN'}">
                             <c:forEach var="order" items="${orders}">
                                 <div class="scroll" id="order${loop.index}">
