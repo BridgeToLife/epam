@@ -1,0 +1,112 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 5px;
+    width: 60%;
+    margin: auto ;
+}
+
+.image{
+	display: block;
+    float: left;
+    height: 300px;
+    padding: 5px;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.personalInfo{
+	display: block;
+    float: right;
+    grid-column: 2 / 4;
+    background: rgba(0, 0, 0, 0.6);
+	margin-top: 5px; 
+}
+
+.tracks {
+	display: block;
+    float: left;
+    grid-column: 1 / 4;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.personalInfo p{
+    font-size: 17px;
+}
+
+
+#username{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    font-size: 30px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: right;
+}
+
+.personalInfo ul{
+margin-top: 20px;
+text-align: left;
+margin-left: 40px;
+font-size: 35px;
+color: #fff;
+}
+
+.personalInfo li{
+text-decoration: none;
+list-style: none;
+padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 787px){
+	.image{
+		display: block;
+    	float: none;
+    	grid-column: 2 / 2;
+	}
+
+	.personalInfo{
+		display: block;
+    	float: none; 
+    	grid-column: 2 / 2;
+	}
+
+	.tracks {
+		display: block;
+    	float: none;
+    	grid-column: 2 / 2;
+	}
+
+}
+
+
+@media only screen and (max-width: 535px){
+
+	main{
+    	width: 100%;
+	}
+	
+	.image{
+		display: block;
+    	float: none;
+	}
+
+	.personalInfo{
+		display: block;
+    	float: none; 
+	}
+
+	.tracks {
+		display: block;
+    	float: none;
+	}
+
+}
+
+

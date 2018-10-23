@@ -1,0 +1,44 @@
+.orders {
+   grid-column: 1/4;
+   margin-top: 5px;
+   height: 100%;
+}
+
+.scroll{
+    height: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+.scroll p.button{
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    padding-left: 5px;
+    margin-bottom: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.scroll p {
+    margin-bottom: auto;
+    margin-top: auto;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.scroll a{
+    text-decoration: none;
+    color: #0506ff;
+    text-align: center;
+    font-size: 17px;
+}
+
+.scroll p.button#book{
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
